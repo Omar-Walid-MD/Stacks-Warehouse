@@ -1,0 +1,133 @@
+{
+    "pageTitle": "Stacks Warehouse",
+    "stack": "Stack",
+    "pushValue": "Push value...",
+
+    "stackOperations": "Stack Operations",
+    "sort": "Sort",
+    "sortAsc": "Sort: Ascending",
+    "sortDesc": "Sort: Descending",
+    "append": "Append",
+    "move": "Move",
+    "reverse": "Reverse",
+    "union": "Union",
+    "filter": "Filter",
+
+    "operationPanel": "Operation Panel",
+    "operationPlay": "Play",
+    "operationShowSteps": "Show Steps",
+    "operationReset": "Reset",
+
+    "addFilter": "Add Filter...",
+    "andFilter": "and",
+    "orFilter": "or",
+
+    "step-0":
+    {
+        "0": "Push",
+        "1": "to"
+    },
+    "step-1":
+    {
+        "0": "Because",
+        "1": "is greater than",
+        "2": "push",
+        "3": "to"
+    },
+    "step-2":
+    {
+        "0": "Because",
+        "1": "is less than",
+        "2": "push",
+        "3": "to"
+    },
+    "step-3":
+    {
+        "0": "Because",
+        "1": "is equal to",
+        "2": "push",
+        "3": "to"
+    },
+    "step-4":
+    {
+        "0": "Because",
+        "1": "passes the filter, push",
+        "2": "to"
+    },
+    "step-5":
+    {
+        "0": "Because",
+        "1": "fails the filter, return",
+        "2": "to"
+    },
+    "step-done": "Done",
+
+    "stackNames":
+    {
+        "stack": "Stack",
+        "input": "Input",
+        "output": "Output",
+        "temp": "Temp",
+        "temp2": "Temp2",
+        "second": "Second",
+        "third": "Third",
+        "variable": "Variable"
+    },
+
+    "lng":
+    {
+        "ar": "Arabic",
+        "en": "English"
+    },
+
+    "info":
+    {
+        "s1": "What is it?",
+        "s1-1": "A simple web application to provide graphical representation of the abstract data type known as \"stack\" as well as several operations to perform on a stack.",
+        "s1-2": "In a stack, the main focus is the top item where the items underneath are not accessible unless the top item is removed. The data flow in stacks is referred to as FILO (First in Last out) or (Last in First Out) since the first item added to the stack will be buried at the bottom and the last one to be removed.",
+        "s1-3": "In this application, the warehouse trolley refers to a stack, and the boxes refers to stack items. (A trolley holding boxes is a real application of a stack since only the top box can be removed at a time.)",
+
+        "s2": "How to use:",
+        "s2-1": "Pushing:",
+        "s2-2": "Pushing means adding an item on top of the stack. To push an item to the stack, simply enter a numerical value in the input field then click the push button or simply hit Enter.",
+        "s2-3": "Popping:",
+        "s2-4": "Popping means removing the item on top of the stack. To pop an item from the stack, simply click the pop button.",
+        "s2-5": "Transferring boxes by Drag,N,Drop:",
+        "s2-6": "In code, transferring a value between stack is done by pushing the top value of the first stack to the second stack then popping it from the first stack. In this application, a simple user-friendly method to transfer an item is by dragging it and dropping it onto another stack. Note that only the top item can be dragged.",
+        "s2-7": "Resizing a stack:",
+        "s2-8": "To control how many items a stack can hold, use the size label at the left of each stack and move up or down to resize it. Note that for the sake of simplicity of graphical representation, each stack can only hold up to ten items.",
+        "s2-9": "Adding and Removing stacks:",
+        "s2-10": "Click the Add button to create a new stack or click the Remove button under a stack to remove it. You can have up to five stacks.",
+        "s2-11": "Stack Labels:",
+        "s2-12": "Labeling each stack can help you remember the purpose of each stack while performing operations and trying out new methods. To edit a stack's label, simply click on the label and edit the text.",
+
+        "s3": "Stack Operations:",
+        "s3-1": "Clicking on the operation button under a non-empty stack, you will find several operations that can be performed using the stack you selected. The following are the common stack operations:",
+        "s3-2": "Sort: numerically sort a stack (ascendingly or descendingly)",
+        "s3-3": "Append: join another stack's items to an existing stack while preserving order",
+        "s3-4": "Move: moving a stack's items to another stack while preserving order",
+        "s3-5": "Reverse: reverse a stack",
+        "s3-6": "Union: returns the common items between two stacks",
+        "s3-7": "Filter: filters out items by custom conditions",
+
+        "s3-8": "The Operations Window:",
+        "s3-9": "By selecting an operation, a new window will open where multiple stacks will be used to carry out the desired operation on the selected stack.",
+        "s3-10": "During an operation, each stack will be labeled with a special label to identify its purpose. These labeled stacks are:",
+        "s3-11": "Input: the stack selected for the operation",
+        "s3-12": "Output: the modified stack resulting from the operation",
+        "s3-13": "Variable: a variable stack that can be modified to test different inputs to some operations",
+        "s3-14": "Temp: stacks labeled as \"Temp\" or other labels are used as temporary stacks during operations",
+
+        "s3-15": "The Operations Panel:",
+        "s3-16": "The panel consists of three buttons for controlling the operation:",
+        "s3-17": "Play: performs the operation and automatically shows the results",
+        "s3-18": "Show Steps: carries out the operation step by step with a brief description of each step",
+        "s3-19": "Reset: resets the stacks. Can be clicked when the operation is done or while showing the steps",
+        "s3-20": "An additional \"filters panel\" will appear with the filter operation where you can add up to 5 filters.",
+        "s3-21": "To add a filter condition (in the syntax of standard programming conditions), type in the coniditon and click the add button or hit Enter. Only valid conditions will be entered. For the second and more filter coniditons, you can choose either \"and\" or \"or\" to join them with previous conditions."
+    },
+
+
+    "footer": "© Omar Walid Diab"
+
+}
