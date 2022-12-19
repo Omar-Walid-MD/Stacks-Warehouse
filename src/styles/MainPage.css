@@ -1,0 +1,190 @@
+*
+{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  box-sizing: border-box;
+}
+.flex-center
+{
+  display: flex;
+  justify-content: center; align-items: center;
+}
+.flex-row
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; align-items: center;
+}
+.flex-column
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; align-items: center;
+}
+.page-container
+{
+  width: 100vw; height: 100vh;
+
+  background-color: rgb(44, 44, 44);
+
+  background: radial-gradient(lightgrey 10%, dimgrey 80%);
+  
+  overflow: hidden;
+  
+  position: relative;
+}
+.page-container[lng="ar"] *
+{
+  direction: rtl;
+}
+.outer-background
+{
+  width: 100%; height: 100%;
+
+  background-image: url("../img/background.png");
+  background-size: 100% 100%;
+
+  filter: blur(20px) brightness(0.5);
+
+  position: absolute;
+}
+.page-background-img
+{
+  height: 900px;
+
+  /* border-radius: 20px; */
+
+  filter: blur(2px);
+
+  /* border: 10px solid black; */
+
+  position: absolute;
+}
+.page-inner-frame
+{
+  width: 1715px; height: 900px;
+
+  position: absolute;
+}
+.page-column
+{
+  position: relative;
+}
+.page-header
+{
+  width: max-content;
+
+  position: absolute;
+  top: -40px;
+
+  z-index: 0;
+}
+.page-title
+{
+  font-size: 40pt;
+  font-weight: 600;
+
+  text-shadow: 0 10px 10px rgb(128, 128, 128);
+
+}
+.stack-shelf
+{
+  width: fit-content; height: 660px;
+  max-width: 1400px;
+
+  /* background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.3); */
+
+  border-radius: 20px;
+
+  align-items: flex-end;
+
+  position: relative;
+}
+.page-footer
+{
+  width: 100%; height: 4vh;
+
+  font-size: 2vh;
+
+  background-color: rgb(50, 55, 80);
+  color: white;
+
+  position: absolute;
+  bottom: 0;
+}
+.page-footer-credits
+{
+  position: absolute;
+  left: 25%;
+}
+.page-footer-github-link
+{
+  height: 100%;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 3vh;
+
+  margin-inline-start: 2vh;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+.page-footer-github-link:hover
+{
+  color: skyblue;
+
+  transform: scale(1.1);
+}
+.page-footer-language
+{  
+  position: absolute;
+  right: 25%;
+
+  cursor: pointer;
+}
+.page-footer-language-buttons-container
+{
+  background-color: rgb(50, 55, 80);
+
+  border-radius: 1vh;
+  box-shadow: 0 0 1vh black;
+
+  padding: 1vh;
+
+  position: absolute;
+  bottom: 100%;
+
+  transform: scaleY(0);
+  transform-origin: bottom;
+
+  transition: transform 0.1s ease-in-out;
+}
+.page-footer-language-button
+{
+  background-color: transparent;
+  color: white;
+
+  font-size: 100%;
+
+  padding: 0;
+  margin: 0.25vh;
+  border: none;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+.page-footer-language-button:hover
+{
+  color: lightblue;
+  transform: scale(1.1);
+}
+.page-footer-language:hover .page-footer-language-buttons-container
+{
+  transform: scaleY(1);
+}

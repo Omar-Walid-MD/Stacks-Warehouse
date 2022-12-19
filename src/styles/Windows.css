@@ -1,0 +1,453 @@
+.window-overlay
+{
+  width: 100%; height: 100%;
+  background-color: rgba(75, 85, 135, 0.8);
+
+  z-index: 1;
+
+  position: absolute;
+}
+.operation-window-container
+{
+  width: 1300px; height: 650px;
+  background-color: rgb(50, 55, 80);
+
+  border-radius: 20px;
+  border: 10px solid rgb(50, 55, 80);
+
+  position: relative;
+
+}
+.operation-window-container > .page-background-img
+{
+  height: 100%; width: 100%;
+
+  border: none;
+
+  filter:blur(3px);
+}
+.operation-window-container > .flex-column
+{
+  transform: scale(0.9);
+}
+.operation-window-close-button
+{
+  aspect-ratio: 1;
+
+  background-color: rgb(100, 105, 150);
+  color: white;
+
+  font-size: 35pt;
+
+  border: none; outline: none;
+  border-radius: 15px;
+
+  box-shadow: 0 0 10px black;
+
+  position: absolute;
+  top: calc(100% + 10px); left: calc(100% + 10px);
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+.operation-window-header
+{
+  width: max-content;
+
+  position: absolute;
+  top: -10px;
+
+  z-index: 0;
+}
+.page-container[lng="en"] .operation-window-header
+{
+  top: 0;
+}
+.step-label
+{
+  color: slateblue;
+  
+  font-size: 22.5pt;
+  font-weight: 400;
+
+  text-align: center;
+}
+.step-progress-bar
+{
+  width: 300px; height: 15px;
+
+  background-color: white;
+
+  border-radius: 10px;
+  /* border: 2px solid black; */
+  box-shadow: 0 5px 10px black;
+
+  margin-top: 15px;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+.step-progress
+{
+  height: 100%;
+
+  background-color: slateblue;
+
+  box-shadow: 0 0 10px slateblue;
+
+  position: absolute;
+
+  transition: width 0.1s ease-in-out;
+}
+
+.operation-window-panel
+{
+  width: fit-content; height: fit-content;
+
+  background-color: rgb(50, 55, 80);
+
+  border-radius: 10px;
+
+  padding: 10px;
+
+  position: absolute;
+  top: 10px; left: 10px;
+}
+.page-container[lng="ar"] .operation-window-panel, .operation-filter-panel
+{
+  right: 10px;
+}
+.operation-window-panel-label
+{
+  color: white;
+
+  font-size: 20pt;
+}
+.operation-window-panel-button-group
+{
+  width: 200px;
+  margin: 10px 0;
+}
+.operation-window-panel-button
+{
+  aspect-ratio: 1;
+
+  background-color: rgb(100, 105, 150);
+  color: white;
+
+  font-size: 35pt;
+
+  border: none; outline: none;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px black;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+
+  position: relative;
+
+  z-index: 1;
+}
+.operation-window-panel-button:disabled
+{
+  background-color: rgb(70, 70, 70);
+  pointer-events: none;
+}
+.operation-window-panel-button:hover
+{
+  transform: scale(1.1);
+}
+.operation-window-panel-button:hover > .button-label
+{
+  opacity: 1;
+}
+.operation-window-panel-button > .button-label
+{
+  width: max-content;
+
+  font-size: 18pt;
+
+  background-color: rgb(50, 55, 80);
+
+  padding: 2px 5px;
+  margin: 0;
+
+  border-radius: 5px;
+  box-shadow: 0 0 10px black;
+
+  position: absolute;
+  bottom: -40px;
+
+  opacity: 0;
+
+  transition: opacity 0.1s ease-in-out;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.operation-window-close-button:hover
+{
+  transform: scale(1.1);
+}
+
+.operation-filter-panel
+{
+  width: 220px; height: fit-content;
+
+  background-color: rgb(50, 55, 80);
+  color: white;
+
+  border-radius: 10px;
+
+  padding: 10px;
+
+  position: absolute;
+  top: 150px; left: 10px;
+}
+.operation-filter-input-container
+{
+  margin-bottom: 10px;
+}
+.operation-filter-bool-option
+{
+  height: 35px; aspect-ratio: 1;
+
+  font-size: 14pt;
+
+  border-radius: 5px;
+
+  border: none; outline: none;
+
+  margin-inline-end: 5px;
+
+  cursor: pointer;
+}
+.operation-filter-input
+{
+  width: 100%; height: 35px;
+
+  font-size: 15pt;
+
+  margin-inline-end: 5px;
+  padding: 5px;
+
+  border-radius: 5px;
+
+  border: none; outline: none;
+}
+.operation-filter-container
+{
+  font-size: 20pt;
+}
+.operation-filter-container:not(:first-child)
+{
+  margin-top: 5px;
+}
+.operation-filter-value
+{
+  max-width: 150px;
+
+  background-color: darkslateblue;
+
+  box-shadow: 0 2px 5px black;
+  border-radius: 5px;
+
+  padding: 2px 5px;
+}
+.operation-filter-button
+{
+  width: 35px;
+
+  aspect-ratio: 1;
+
+  background-color: transparent;
+  color: white;
+
+  font-size: 15pt;
+  font-weight: 500;
+
+  border-radius: 5px;
+
+  border: 2px solid white; outline: none;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+}
+.operation-filter-bool-option
+{
+  font-size: 12pt;
+}
+.operation-filter-button:hover
+{
+  transform: scale(1.1);
+  background-color: white;
+  color: darkslateblue;
+}
+
+
+
+
+
+
+
+.options-window-container
+{
+  width: 580px; min-height: fit-content;
+
+  background-color: rgb(50, 55, 80);
+
+  border-radius: 20px;
+  box-shadow: 0 0 20px black;
+
+  padding: 20px;
+
+  position: relative;
+}
+.options-window-title
+{
+  color: white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.options-window-content
+{
+  width: 100%; height: 100%;
+
+  align-items: flex-start;
+}
+.options-window-stack-preview
+{
+  background-color: rgb(150, 150, 180);
+
+  background-image: url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgb(50, 55, 80);
+}
+.options-window-option-panel
+{
+  width: 40%; height: 100%;
+
+  margin-top: 10%;
+
+  justify-content: flex-start;
+}
+.options-window-option-panel-row
+{
+  width: 100%;
+
+  font-size: 20pt;
+  color: white;
+
+  margin-bottom: 15px;
+  
+}
+.options-window-option-panel-row > .buttons-row
+{
+  width: 130px;
+}
+
+
+
+
+.info-open-button
+{
+  width: 60px; aspect-ratio: 1;
+
+  font-size: 35pt;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px black;
+
+  position: absolute;
+  bottom: 120px; right: 120px;
+
+  z-index: 0;
+
+  transition: all 0.05s;
+}
+.info-window-container
+{
+  width: 800px; height: 500px;
+
+  background-color: rgb(50, 55, 80);
+  color: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  position: relative;
+}
+.info-window-content
+{
+  height: 100%;
+
+  padding-inline-end: 50px;
+
+  overflow-y: scroll;
+}
+.info-window-content::-webkit-scrollbar
+{
+  appearance: none;
+  width: 20px;
+}
+.info-window-content::-webkit-scrollbar-track
+{
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border-radius: 10px;
+}
+.info-window-content::-webkit-scrollbar-thumb
+{
+  background-color: white;
+
+  border-radius: 10px;
+  border: 3px solid rgb(0, 0, 0,0.9);
+}
+.info-window-content > h1
+{
+  width: 100%;
+  text-align: center;
+}
+.info-window-indent
+{
+  margin-inline-start: 20px;
+}
+.info-window-close-button
+{
+  aspect-ratio: 1;
+
+  background-color: rgb(100, 105, 150);
+  color: white;
+
+  font-size: 35pt;
+
+  border: none; outline: none;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px black;
+
+  position: absolute;
+  top: calc(100% + 10px); left: calc(100% + 10px);
+
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+
+}
+.info-window-close-button:hover
+{
+  transform: scale(1.1);
+}

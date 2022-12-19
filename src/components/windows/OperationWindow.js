@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Stack from "./Stack";
-import StackOperation from "./StackOperations";
 
-function OperationWindow({operation, setOperationWindow})
+import Stack from "../stack/Stack";
+import StackOperation from "../stack/StackOperations";
+
+import "../../styles/Windows.css";
+
+function OperationWindow({operation, setOperation})
 {
     const [tr,il8n] = useTranslation();
 
@@ -221,7 +224,7 @@ function OperationWindow({operation, setOperationWindow})
 
     useEffect(()=>{
 
-        window.onkeydown = function(event){if(event.key === "Escape"){resetButton.current.click();setOperationWindow(null);}};
+        window.onkeydown = function(event){if(event.key === "Escape"){resetButton.current.click();setOperation(null);}};
 
         return function()
         {
@@ -244,7 +247,7 @@ function OperationWindow({operation, setOperationWindow})
     return (
         <div className="window-overlay flex-center">
             <div className="operation-window-container flex-center">
-                <img className="page-background" src={require("./img/background.png")}/>
+                <img className="page-background-img" src={require("../../img/background.png")}/>
                 <div className="page-column flex-column">
                     <div className="operation-window-header flex-column">
                         <div className="page-title">{OperationTitle(operation)}</div>
@@ -308,7 +311,7 @@ function OperationWindow({operation, setOperationWindow})
                         }
                     </div>
                 }
-                <button className="operation-window-close-button flex-center" onClick={function(){resetButton.current.click();setOperationWindow(null)}}><i className='bx bx-x'></i></button>
+                <button className="operation-window-close-button flex-center" onClick={function(){resetButton.current.click();setOperation(null)}}><i className='bx bx-x'></i></button>
             </div>
         </div>
     )

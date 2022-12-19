@@ -1,3 +1,4 @@
+
 *
 {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,26 +22,14 @@
   flex-direction: column;
   justify-content: space-between; align-items: center;
 }
-.hidden-checkbox
-{
-  position: absolute;
-  opacity: 0;
-
-  pointer-events: none;
-}
 .page-container
 {
   width: 100vw; height: 100vh;
 
   background-color: rgb(44, 44, 44);
 
-  /* background-image: url("./img/background.png");
-  background-size: 100% 100%; */
-
   background: radial-gradient(lightgrey 10%, dimgrey 80%);
   
-  /* background-color: rgba(255, 255, 255, 0.1); */
-
   overflow: hidden;
   
   position: relative;
@@ -60,7 +49,7 @@
 
   position: absolute;
 }
-.page-background
+.page-background-img
 {
   height: 900px;
 
@@ -542,7 +531,7 @@
   position: relative;
 
 }
-.operation-window-container > .page-background
+.operation-window-container > .page-background-img
 {
   height: 100%; width: 100%;
 

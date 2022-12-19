@@ -1,14 +1,11 @@
-import Stack from "./Stack";
-import "./App.css"
-import { useState } from "react";
-import MainPage from "./MainPage";
+import MainPage from "./components/MainPage";
 
+
+import "./styles/MainPage.css";
 function App() {
 
-  
-
   return (
-      <MainPage></MainPage>
+      <MainPage />
     );
 }
 

@@ -1,8 +1,11 @@
 import {useEffect, useRef, useState} from "react";
 import { useTranslation } from "react-i18next";
+
 import StackItem from "./StackItem";
 
-function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,setOptionsWindow})
+import "../../styles/Stack.css";
+
+function Stack({stack, stackData, setStackData, PopStack, lock, setOptionsWindow})
 {
 
     const [tr,il8n] = useTranslation();
@@ -13,18 +16,14 @@ function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,
 
     const topItemRef = useRef();
 
-    // const [stackMax,setStackMax] = useState(stack.max);
-
     const stackRef = useRef();
 
     const [buttonLock,setButtonLock] = useState(false);
 
     function lockButtons()
     {
-        console.log("locked");
         setButtonLock(true);
         setTimeout(() => {
-            console.log("unlocked");
             setButtonLock(false);
         }, 100);
     }
@@ -55,7 +54,6 @@ function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,
 
     function GetStackItems()
     {
-        // console.log(stackData);
         return stack ? stack.items : [];
     }
 
@@ -76,8 +74,6 @@ function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,
 
         }
 
-
-        // console.log(stackData);
     }
 
     function pop()
@@ -89,7 +85,6 @@ function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,
                 items: stack.items.slice(0,stack.items.length-1)
             };
 
-            // console.log(getComputedStyle(topItemRef.current).animationDuration.slice(0,-1));
             topItemRef.current.setAttribute("state","unmounted");
             
             setTimeout(() => {
@@ -125,13 +120,9 @@ function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,
     {
         for (let i = 0; i < stackData.length; i++) {
             const stackInList = stackData[i];
-            // console.log(stackInList.ref);
-            // console.log(IsOverlapping(event,stackInList.ref.getBoundingClientRect()));
-            console.log("Event: " + event.pageX);
-            console.log(stackInList.ref.getBoundingClientRect()); 
+
             if(IsOverlapping(event,stackInList.ref.getBoundingClientRect())&&stackInList.id!==stack.id&&stackInList.items.length<stackInList.max)
             {
-                // console.log("should push");
                 let topVal = top();
                 push(stackInList.id,topVal);
                 pop();
@@ -150,16 +141,6 @@ function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,
                 event.pageY < rect.bottom);
     }
 
-    function makeId(length)
-    {
-        let result = "";
-        let chars = "123456789";
-        for (var i = 0; i < length; i++) {
-        result += chars[Math.floor(Math.random() * 9)];
-        }
-        return result;
-    }
-
     useEffect(()=>{
         if(!stack.ref && stackData)
         {
@@ -170,8 +151,6 @@ function Stack({stack, stackData, setStackData,PopStack,lock,setOperationWindow,
             setStackData(stackData.map((stackInList)=> stackInList===stack ? updatedStack : stackInList));
         }
     },[stackData]);
-
-    // console.log(stack && stack);
 
     return (
         <div className="stack-container flex-center" ref={stackRef} id={stack && stack.id}>
