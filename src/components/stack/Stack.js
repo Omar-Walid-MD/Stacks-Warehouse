@@ -5,6 +5,7 @@ import StackItem from "./StackItem";
 
 import "../../styles/Stack.css";
 
+
 function Stack({stack, stackData, setStackData, PopStack, lock, setOptionsWindow})
 {
 
@@ -141,6 +142,7 @@ function Stack({stack, stackData, setStackData, PopStack, lock, setOptionsWindow
                 event.pageY < rect.bottom);
     }
 
+    //Add stack element reference
     useEffect(()=>{
         if(!stack.ref && stackData)
         {

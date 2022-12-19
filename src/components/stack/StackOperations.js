@@ -1,18 +1,24 @@
 
-
+//Main operation function containing functions for stack operations
 function StackOperation(operation,stackData,setStackData,filters,withSteps,setIntervalId,setCurrentStep,setStepProgress)
 {
+    //Playback variables
     let stepInterval = 2000;
     let stepArray = [];
 
     let tempData = stackData;
 
+    //Updates state to rerender stacks
     function rerender()
     {
         setStackData(tempData);
     }
 
-    console.log(stackData);
+    // Basic stack functions:
+    // pop
+    // push
+    // top
+    // empty
 
     function pop(label)
     {
@@ -48,6 +54,14 @@ function StackOperation(operation,stackData,setStackData,filters,withSteps,setIn
         return targetStack.items.length === 0;
     }
 
+
+
+    //Playback functions:
+    //addStep
+    //showSteps
+
+
+    //Adds an object containing stringified code to be eval()ed and a description of the step
     function addStep(step,desc)
     {
         if(withSteps) stepArray.push({
@@ -56,6 +70,7 @@ function StackOperation(operation,stackData,setStackData,filters,withSteps,setIn
         });
     }               
 
+    //Timed loop to execute steps
     function showSteps(seconds)
     {
         let i = 0;
@@ -75,7 +90,6 @@ function StackOperation(operation,stackData,setStackData,filters,withSteps,setIn
             }
             else
             {
-                console.log("Done");
                 setCurrentStep({step:"done"});
                 clearInterval(interval);
             }
@@ -83,6 +97,17 @@ function StackOperation(operation,stackData,setStackData,filters,withSteps,setIn
         }, seconds);
     }
 
+
+    
+    //Operation functions:
+    //sortAsc, sortDesc
+    //move
+    //reverse
+    //append
+    //union
+    //filter
+
+    
     function sortAsc()
     {
         while(!empty("input"))
@@ -259,8 +284,6 @@ function StackOperation(operation,stackData,setStackData,filters,withSteps,setIn
             filterCondition += bool + "x" + f.value;
             
         }
-
-        console.log(filterCondition);
 
         while(!empty("input"))
         {

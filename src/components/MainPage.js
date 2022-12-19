@@ -9,6 +9,7 @@ import i18next from "i18next";
 
 import "../styles/MainPage.css"
 
+//App Page
 function MainPage()
 {
     const [tr,il8n] = useTranslation();
@@ -60,6 +61,7 @@ function MainPage()
         return result;
     }
 
+    //Closes Options Window when opening Operations Window
     useEffect(()=>{
       if(operation)
       {
@@ -67,6 +69,7 @@ function MainPage()
       }
     },[operation]);
 
+    //Setting the drag cursor
     useEffect(()=>{
 
       document.addEventListener("dragover", (event) => {

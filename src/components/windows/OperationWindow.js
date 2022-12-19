@@ -6,6 +6,7 @@ import StackOperation from "../stack/StackOperations";
 
 import "../../styles/Windows.css";
 
+//Operation Window where operation is carried out on stack
 function OperationWindow({operation, setOperation})
 {
     const [tr,il8n] = useTranslation();
@@ -106,6 +107,7 @@ function OperationWindow({operation, setOperation})
         console.log(variableStack);
     }
 
+
     function StepText(currentStep)
     {
         if(currentStep)
@@ -177,11 +179,8 @@ function OperationWindow({operation, setOperation})
         }
         catch (EvalError)
         {
-            console.log("invalid");
             return false;
         }
-
-        console.log("valid")
         return true;
     }
 
@@ -204,24 +203,18 @@ function OperationWindow({operation, setOperation})
         setFilters(prev => prev.filter((filter)=>filter.id!==filterId));
     }
 
+    //Applies changes to variable stack if avaialable
     useEffect(()=>{
-
        stackData && operation.variable && playState==="ready" && handleVarItems(stackData);
-       console.log(stackData);
-
     },[stackData])
 
-    useEffect(()=>{
-        if(operation)
-        {
-            setStackData(PrepareStacks(operation.type));
-        }
-        else
-        {
-            setStackData([NewStack()]);
-        }
-    },[operation]);
 
+    useEffect(()=>{
+        setStackData(PrepareStacks(operation.type));
+    },[]);
+
+
+    //Closes window by pressing Escape and removes the event listener when component unmounts
     useEffect(()=>{
 
         window.onkeydown = function(event){if(event.key === "Escape"){resetButton.current.click();setOperation(null);}};

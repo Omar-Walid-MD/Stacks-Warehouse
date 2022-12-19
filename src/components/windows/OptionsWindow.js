@@ -5,6 +5,7 @@ import Stack from "../stack/Stack";
 
 import "../../styles/Windows.css";
 
+//Options Window for Operations on selected stack
 function OptionsWindow({stack,setOperation,setOptionsWindow})
 {
   const [tr,il8n] = useTranslation();
@@ -31,9 +32,9 @@ function OptionsWindow({stack,setOperation,setOptionsWindow})
     startedOperation = true;
     setOperation(StackOperation(type));
   }
-
   
 
+  //Closes window by pressing Escape and removes the event listener when component unmounts
   useEffect(()=>{
 
     window.onkeydown = function(event){if(event.key === "Escape") setOptionsWindow(null);};

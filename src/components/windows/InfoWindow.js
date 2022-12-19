@@ -3,10 +3,12 @@ import { useEffect} from "react";
 
 import "../../styles/Windows.css";
 
+//Page Info Window
 function InfoWindow({setInfoWindow})
 {
     const [tr,il8n] = useTranslation();
 
+    //Closes window by pressing Escape and removes the event listener when component unmounts
     useEffect(()=>{
     
         window.onkeydown = function(event){if(event.key==="Escape") setInfoWindow(false)}
