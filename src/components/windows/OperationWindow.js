@@ -6,7 +6,7 @@ import StackOperation from "../stack/StackOperations";
 
 import "../../styles/Windows.css";
 
-//Operation Window where operation is carried out on stack
+// Operation Window where operation is carried out on stack
 function OperationWindow({operation, setOperation})
 {
     const [tr,il8n] = useTranslation();

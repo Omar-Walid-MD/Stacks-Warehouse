@@ -3,7 +3,7 @@ import { useEffect} from "react";
 
 import "../../styles/Windows.css";
 
-//Page Info Window
+// Page Info Window
 function InfoWindow({setInfoWindow})
 {
     const [tr,il8n] = useTranslation();
@@ -53,7 +53,7 @@ function InfoWindow({setInfoWindow})
                   <ul>
                     <li>{tr("info.s3-2")}</li>
                     <li>{tr("info.s3-3")}</li>
-                    <li><b>{tr("info.s3-4")}</b></li>
+                    <li>{tr("info.s3-4")}</li>
                     <li>{tr("info.s3-5")}</li>
                     <li>{tr("info.s3-6")}</li>
                     <li>{tr("info.s3-7")}</li>

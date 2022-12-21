@@ -81,7 +81,7 @@
 
   border-radius: 10px;
   /* border: 2px solid black; */
-  box-shadow: 0 5px 10px black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
 
   margin-top: 15px;
 

@@ -34,7 +34,7 @@ function OptionsWindow({stack,setOperation,setOptionsWindow})
   }
   
 
-  //Closes window by pressing Escape and removes the event listener when component unmounts
+  // Closes window by pressing Escape and removes the event listener when component unmounts
   useEffect(()=>{
 
     window.onkeydown = function(event){if(event.key === "Escape") setOptionsWindow(null);};
