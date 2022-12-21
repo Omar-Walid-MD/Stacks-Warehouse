@@ -107,13 +107,13 @@ function MainPage()
           <div className="page-footer flex-center">
             <p className="page-footer-credits flex-row">
               {tr("footer")}
-              <a href="https://github.com/Omar-Walid-MD" target="_blank" className='bx bxl-github page-footer-github-link'></a>
+              <a href="https://github.com/Omar-Walid-MD" target="_blank" rel="noreferrer" className='bx bxl-github page-footer-github-link'></a>
             </p>
             <div className="page-footer-language flex-center">
               <i className='bx bx-globe'></i>
               <div className="page-footer-language-buttons-container flex-column">
-                <button className="page-footer-language-button" onClick={function(){il8n.changeLanguage("ar")}}>{tr("lng.ar")}</button>
-                <button className="page-footer-language-button" onClick={function(){il8n.changeLanguage("en")}}>{tr("lng.en")}</button>
+                <button className="page-footer-language-button" onClick={function(){il8n.changeLanguage("ar")}}>العربية</button>
+                <button className="page-footer-language-button" onClick={function(){il8n.changeLanguage("en")}}>English</button>
               </div>
             </div>
           </div>

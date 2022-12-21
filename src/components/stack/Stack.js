@@ -62,7 +62,7 @@ function Stack({stack, stackData, setStackData, PopStack, lock, setOptionsWindow
     {
         let targetStack = stackData.filter((stackInList)=> stackInList.id===targetId)[0];
         
-        if(targetStack.items.length<targetStack.max && pushValue)
+        if(targetStack.items.length<targetStack.max && (pushValue || pushValue===0))
         {
 
             let updatedStack = {
@@ -89,8 +89,6 @@ function Stack({stack, stackData, setStackData, PopStack, lock, setOptionsWindow
             topItemRef.current.setAttribute("state","unmounted");
             
             setTimeout(() => {
-
-                console.log("unmounted");
 
                 if(GetStackItems().length>0)
                 setStackData(prev => prev.map((stackInList)=> stackInList.id===updatedStack.id ? updatedStack : stackInList));
