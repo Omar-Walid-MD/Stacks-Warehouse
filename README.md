@@ -1,3 +1,9 @@
+# How to Use Project:
+- Install/Clone Files and Open Terminal in Directory
+- Run `yarn install` to Install Dependencies
+- Run `yarn start` to Start Development Server
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
