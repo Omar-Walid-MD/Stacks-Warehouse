@@ -22,6 +22,7 @@
     "predeploy" : "yarn run build",
     "deploy" : "gh-pages -d build"
   },
+  "homepage": "https://omar-walid-md.github.io/Stacks-Warehouse/",
   "eslintConfig": {
     "extends": [
       "react-app",
