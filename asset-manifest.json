@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Stacks-Warehouse/static/css/main.7cde47a6.css",
-    "main.js": "/Stacks-Warehouse/static/js/main.43c22bd3.js",
+    "main.css": "/Stacks-Warehouse/static/css/main.5ff55dcb.css",
+    "main.js": "/Stacks-Warehouse/static/js/main.bd827ce0.js",
     "static/js/787.a389d79d.chunk.js": "/Stacks-Warehouse/static/js/787.a389d79d.chunk.js",
     "static/media/background.png": "/Stacks-Warehouse/static/media/background.bc4750afd4c38f0e4dc1.png",
     "static/media/stack-background.png": "/Stacks-Warehouse/static/media/stack-background.bdced649bb1f84731dad.png",
@@ -9,12 +9,12 @@
     "static/media/stack-base.png": "/Stacks-Warehouse/static/media/stack-base.2e67f323d03b67811f5f.png",
     "static/media/box.png": "/Stacks-Warehouse/static/media/box.5c46b76a19524e643369.png",
     "index.html": "/Stacks-Warehouse/index.html",
-    "main.7cde47a6.css.map": "/Stacks-Warehouse/static/css/main.7cde47a6.css.map",
-    "main.43c22bd3.js.map": "/Stacks-Warehouse/static/js/main.43c22bd3.js.map",
+    "main.5ff55dcb.css.map": "/Stacks-Warehouse/static/css/main.5ff55dcb.css.map",
+    "main.bd827ce0.js.map": "/Stacks-Warehouse/static/js/main.bd827ce0.js.map",
     "787.a389d79d.chunk.js.map": "/Stacks-Warehouse/static/js/787.a389d79d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cde47a6.css",
-    "static/js/main.43c22bd3.js"
+    "static/css/main.5ff55dcb.css",
+    "static/js/main.bd827ce0.js"
   ]
 }
