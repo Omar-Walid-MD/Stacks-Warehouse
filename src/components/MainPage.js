@@ -88,7 +88,7 @@ function MainPage()
               <div className="page-header flex-center">
                 <div className="page-title">{tr("pageTitle")}</div>
               </div>
-              <div className="stack-shelf flex-center">
+              <div className="stack-shelf page-shelf flex-center">
                 {
                   stackData.map((stack)=>
                   <Stack stack={stack} stackData={stackData} setStackData={setStackData} PopStack={PopStack} setOperation={setOperation} setOptionsWindow={setOptionsWindow} key={"stack-"+stack.id} />

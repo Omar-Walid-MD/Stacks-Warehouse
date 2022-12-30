@@ -195,7 +195,7 @@
 
 @media (max-height: 750px)
 {
-  .stack-shelf > .stack-container
+  .page-shelf > .stack-container
   {
     transform: scale(0.6);
     margin: 0;
@@ -211,5 +211,26 @@
   .operation-window-container
   {
     transform: scale(0.75);
+  }
+}
+
+@media (max-height: 500px)
+{
+  .page-shelf > .stack-container
+  {
+    transform: scale(0.4);
+    margin: 0;
+  }
+  .options-window-container
+  {
+    transform: scale(0.5);
+  }
+  .info-window-container
+  {
+    transform: scale(0.58);
+  }
+  .operation-window-container
+  {
+    transform: scale(0.5);
   }
 }
