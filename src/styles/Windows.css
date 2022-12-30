@@ -17,6 +17,8 @@
 
   position: relative;
 
+  margin: 0 8vw;
+
 }
 .operation-window-container > .page-background-img
 {
@@ -26,9 +28,14 @@
 
   filter:blur(3px);
 }
-.operation-window-container > .flex-column
+.operation-window-container > .page-column
 {
-  transform: scale(0.9);
+  padding-bottom: 50px;
+}
+.operation-window-container > .page-column >.stack-shelf
+{
+  scale: 0.85;
+  margin: 0;
 }
 .operation-window-close-button
 {
@@ -54,9 +61,6 @@
 .operation-window-header
 {
   width: max-content;
-
-  position: absolute;
-  top: -10px;
 
   z-index: 0;
 }
@@ -362,20 +366,24 @@
 
 .info-open-button
 {
-  width: 60px; aspect-ratio: 1;
+  width: fit-content; aspect-ratio: 1;
 
-  font-size: 35pt;
+  font-size: min(35pt,7vh);
 
-  border-radius: 10px;
+  border-radius: min(10px,2vh);
 
-  box-shadow: 0 0 10px black;
+  padding: min(5px,1vh);
+
+  box-shadow: 0 0 min(10px,2vh) black;
 
   position: absolute;
-  bottom: 120px; right: 120px;
+  bottom: min(10vh,120px); right: min(5vw,120px);
 
   z-index: 0;
 
   transition: all 0.05s;
+
+  
 }
 .info-window-container
 {

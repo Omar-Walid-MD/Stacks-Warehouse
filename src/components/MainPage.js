@@ -82,12 +82,12 @@ function MainPage()
     return (
         <div className="page-container flex-center" lng={i18next.language} onKeyDown={function(event){if(event.key === "Escape")setOperation(null);}}>
           <div className="outer-background"></div>
-          <img className="page-background-img" src={require("../img/background.png")}/>
           <div className="page-inner-frame flex-center">
+            <img className="page-background-img" src={require("../img/background.png")}/>
             <div className="page-column flex-column">
-                <div className="page-header flex-center">
-                  <div className="page-title">{tr("pageTitle")}</div>
-                </div>
+              <div className="page-header flex-center">
+                <div className="page-title">{tr("pageTitle")}</div>
+              </div>
               <div className="stack-shelf flex-center">
                 {
                   stackData.map((stack)=>
